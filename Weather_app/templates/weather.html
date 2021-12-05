@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/weather/weather.css')}}">
+    <title></title>
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="navbar-brand">
+          <a href="#">Kiran Reddy</a>
+        </div>
+        <div class="nav-menu">
+          <form class="search-form" method="POST">
+            <div class="input1">
+              {{form.location(placeholder='Enter Location')}}
+              {{form.submit()}}
+            </div>
+          </form>
+        </div>
+      </div>
+    </header>
+    <section>
+      <div class="card">
+        <div class="data">
+          {% block content1 %}
+          {% endblock %}
+        </div>
+        <div class="location">
+          {% block content2 %}
+          {% endblock %}
+        </div>
+      </div>
+    </section>
+    <footer>
+    </footer>
+  </body>
+</html>

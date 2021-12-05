@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(45deg, #25b79f, #07374a);
+}
+
+.login-form {
+  width: 25rem;
+  border: 1px solid black;
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+.login-form .header {
+  margin: 0;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px 10px 0 0;
+  background-color: #07374a;
+  color: #fefefe;
+  box-shadow: 5px 0 10px #07374a;
+}
+.login-form .form {
+  padding: 30px 40px;
+  background-color: #fefefe;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 10px 0 15px #07374a, 0 10px 15px #07374a;
+}
+.login-form .form form div {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+}
+.login-form .form form i {
+  background-color: #07374a;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 14%;
+  height: 40px;
+  border-radius: 10px 0 0 10px;
+}
+.login-form .form form input {
+  border-radius: 0 10px 10px 0;
+  width: 86%;
+  height: 40px;
+  margin: 0;
+  margin-bottom: 15px;
+  padding: 0 10px;
+}
+.login-form .form form input:focus {
+  outline: none;
+}
+.login-form .form form .button {
+  height: 40px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #07374a;
+  color: #fefefe;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+.login-form .form form .button:hover {
+  background: #09455d;
+}
+.login-form .form p {
+  text-align: center;
+  color: grey;
+}
+.login-form .form p a {
+  text-decoration: none;
+  font-weight: bold;
+  opacity: 1;
+  color: #07374a;
+}
+
+/*# sourceMappingURL=login.css.map */

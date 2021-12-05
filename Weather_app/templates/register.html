@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/login.css')}}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <title>Register</title>
+  </head>
+  <body>
+    <div class="login-form">
+      <div class="header">
+        <h1>Register</h1>
+      </div>
+      <div class="form">
+        <form class="lg-form" method="POST">
+          {{form.hidden_tag()}}
+          <div class="input1">
+            <i class="fas fa-user"></i>
+            {{form.username(placeholder='Username')}}
+          </div>
+          <div class="input2">
+            <i class="fas fa-envelope"></i>
+            {{form.email(placeholder='Email')}}
+          </div>
+          <div class="input3">
+            <i class="fas fa-key"></i>
+            {{form.password(placeholder='Password')}}
+          </div>
+          <div class="input4">
+            <i class="fas fa-key"></i>
+            {{form.pass_confirm(placeholder='Confirm Password')}}
+          </div>
+          <div>{{form.submit(class='button')}}</div>
+        </form>
+        <p>Already Registered?<a href="{{url_for('users.login')}}">Login Here!</a> </p>
+      </div>
+    </div>
+  </body>
+</html>

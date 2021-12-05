@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/master.css')}}">
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <a href="#top" class="navbar-brand" id="#top" >Kiran Reddy</a>
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Portfolio</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="{{url_for('users.login')}}" class="nav-link">Login</a></li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
+    {% block content %}
+    {% endblock %}
+  </body>
+  <script src="{{url_for('static',filename='js/script.js')}}" charset="utf-8"></script>
+</html>

@@ -1,0 +1,39 @@
+{% extends 'weather.html' %}
+{% block content1 %}
+<div class="data1">
+  <div class="heading">
+    <h4>CURRENT WEATHER</h4>
+    <p>{{data['time']}}</p>
+  </div>
+  <div class="temp">
+    <div><img src="http://openweathermap.org/img/w/{{data['icon']}}.png" alt="icon"></div>
+    <div class="icon">
+      <div class="item1">
+        <h1>{{data['temp']}}</h1>
+      </div>
+      <div class="item2">
+        <div class='itemA'>
+          <span>&#9900;</span>
+        </div>
+        <div class='itemB'>
+          <p>c</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="disc">
+    <h4>{{data['disc']}}</h4>
+  </div>
+</div>
+<div class="data2">
+  <ul>
+    <li><p>Feels like</p><p>{{data['feels']}}<span>&#8451;</span></p></li>
+    <li><p>Air Quality</p><p>{{data['air']}}</p></li>
+    <li><p>Wind</p><p>{{data["wind"]}} <strong>m/s</strong></p></li>
+    <li><p>Gust</p><p>23</p></li>
+  </ul>
+</div>
+{% endblock %}
+{% block content2 %}
+<h1>{{data['location']}}</h1>
+{% endblock %}
